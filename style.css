@@ -14,14 +14,14 @@ h2 {
 }
 
 .wrapper {
-    display:flex;
-    flex-wrap:wrap;
+    display: grid;
+    gap: 5%;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:1rem;
 }
 
 .col {
-    flex-basis:33%;
-    padding:8px;
-    box-sizing:border-box;
+    margin:0 1rem;
 }
 
 .price-box {
@@ -53,6 +53,7 @@ h2 {
     padding:20px;
     border-bottom:1px solid #eee;
     text-align:center;
+    display:block;
 }
 
 .price-box .emph {
@@ -72,7 +73,7 @@ h2 {
 }
 
 @media(max-width:700px){
-    .col {
-        flex-basis:100%;
+    .wrapper {
+        grid-template-columns:1fr;
     }
 }
