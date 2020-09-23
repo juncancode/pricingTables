@@ -13,9 +13,13 @@ h2 {
     margin:0 auto;
 }
 
+.wrapper {
+    display:flex;
+    flex-wrap:wrap;
+}
+
 .col {
-    float:left;
-    width:33.3%;
+    flex-basis:33%;
     padding:8px;
     box-sizing:border-box;
 }
@@ -69,6 +73,6 @@ h2 {
 
 @media(max-width:700px){
     .col {
-        width:100%;
+        flex-basis:100%;
     }
 }
